@@ -526,6 +526,17 @@ p {
   font-weight: 700;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  align-items: center;
+}
+
+.text-link-muted {
+  color: var(--muted);
+}
+
 .project-body > p:not(.project-subtitle) {
   color: var(--muted);
 }

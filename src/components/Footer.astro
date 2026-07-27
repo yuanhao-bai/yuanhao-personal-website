@@ -19,6 +19,7 @@ import profile from '../data/profile.json';
       <p class="footer-label">Connect</p>
       <a href="/cv">Curriculum vitae</a>
       <a href="/notes">Research notes</a>
+      {profile.github && <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>}
       <a href="/#contact">Collaboration</a>
     </div>
     <div class="footer-meta">
