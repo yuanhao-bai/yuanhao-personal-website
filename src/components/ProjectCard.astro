@@ -1,0 +1,45 @@
+---
+interface Props {
+  project: {
+    slug: string;
+    title: string;
+    subtitle: string;
+    status: string;
+    period: string;
+    summary: string;
+    theme: string;
+    hardware: string[];
+    software: string[];
+  };
+  index?: number;
+}
+
+const { project, index = 0 } = Astro.props;
+---
+
+<article class={`project-card project-${project.theme}`}>
+  <div class="project-visual" aria-hidden="true">
+    <span class="project-index">0{index + 1}</span>
+    <div class="signal-map">
+      <i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <span class="project-code">{project.hardware[0]}</span>
+  </div>
+  <div class="project-body">
+    <div class="project-meta">
+      <span>{project.status}</span>
+      <span>{project.period}</span>
+    </div>
+    <h3><a href={`/projects/${project.slug}`}>{project.title}</a></h3>
+    <p class="project-subtitle">{project.subtitle}</p>
+    <p>{project.summary}</p>
+    <ul class="tag-list" aria-label="Technical stack">
+      {[...project.hardware.slice(0, 2), ...project.software.slice(0, 2)].map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+    <a class="text-link" href={`/projects/${project.slug}`}>
+      View research project <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</article>

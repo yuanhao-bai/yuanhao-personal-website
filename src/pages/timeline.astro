@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import timeline from '../data/timeline.json';
+
+const years = [...new Set(timeline.map((event) => event.year))].sort((a, b) => b - a);
+---
+
+<BaseLayout
+  title="Timeline"
+  description="Research, education, awards, patents, and position milestones in Yuanhao Bai's academic journey."
+>
+  <PageIntro
+    eyebrow="Academic journey"
+    title="Research progress, one milestone at a time."
+    description="A concise, chronological record of positions, projects, awards, and research outputs."
+  />
+
+  <section class="section section-soft">
+    <div class="container timeline">
+      {years.map((year) => (
+        <section class="timeline-year" aria-labelledby={`year-${year}`}>
+          <h2 id={`year-${year}`}>{year}</h2>
+          <div class="timeline-events">
+            {timeline.filter((event) => event.year === year).map((event) => (
+              <article class="timeline-event">
+                <div class="timeline-event-meta">
+                  <span>{event.displayDate}</span>
+                  <span>{event.type}</span>
+                </div>
+                <h3>{event.title}</h3>
+                <p>{event.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import projects from '../../data/projects.json';
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+---
+
+<BaseLayout title={project.title} description={project.summary}>
+  <PageIntro
+    eyebrow={`${project.status} · ${project.period}`}
+    title={project.title}
+    description={project.subtitle}
+  />
+
+  <section class="section">
+    <div class="container detail-grid">
+      <article class="prose">
+        <p class="eyebrow">Overview</p>
+        <p class="page-lead">{project.summary}</p>
+
+        <h2>Motivation</h2>
+        <p>{project.motivation}</p>
+
+        <h2>Research problem</h2>
+        <blockquote>{project.problem}</blockquote>
+
+        <h2>Approach</h2>
+        <p>{project.method}</p>
+
+        <h2>System stack</h2>
+        <div class="stack-columns">
+          <div class="stack-box">
+            <h3>Hardware</h3>
+            <ul>{project.hardware.map((item: string) => <li>{item}</li>)}</ul>
+          </div>
+          <div class="stack-box">
+            <h3>Software & methods</h3>
+            <ul>{project.software.map((item: string) => <li>{item}</li>)}</ul>
+          </div>
+        </div>
+
+        <h2>Current results</h2>
+        <p>{project.results}</p>
+        <p>
+          Quantitative claims and publication links will be added only after they are available
+          and verifiable.
+        </p>
+      </article>
+
+      <aside class="detail-aside">
+        <h2>Project record</h2>
+        <dl>
+          <dt>Status</dt>
+          <dd>{project.status}</dd>
+          <dt>Period</dt>
+          <dd>{project.period}</dd>
+          <dt>Research area</dt>
+          <dd>{project.subtitle}</dd>
+          <dt>Artifacts</dt>
+          <dd>{project.artifacts.join(' · ')}</dd>
+        </dl>
+        <p style="margin: 28px 0 0">
+          <a class="text-link" href="/projects">← All projects</a>
+        </p>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

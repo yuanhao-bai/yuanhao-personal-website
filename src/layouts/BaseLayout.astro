@@ -1,0 +1,84 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import profile from '../data/profile.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  article?: boolean;
+}
+
+const {
+  title = profile.name,
+  description = profile.vision,
+  image = '/og.png',
+  article = false
+} = Astro.props;
+
+const pageTitle = title === profile.name ? `${profile.name} — Research Portfolio` : `${title} — ${profile.name}`;
+const canonical = new URL(Astro.url.pathname, profile.website);
+const socialImage = image ? new URL(image, profile.website).toString() : undefined;
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  url: profile.website,
+  jobTitle: profile.role,
+  affiliation: {
+    '@type': 'CollegeOrUniversity',
+    name: profile.institution
+  },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Central South University'
+  },
+  knowsAbout: [
+    'Embedded AI',
+    'TinyML',
+    'Edge Intelligence',
+    'Embedded Cyber-Physical Systems',
+    'AIoT',
+    'Distributed Sensor Networks',
+    'Safety-critical AI'
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#123b63" />
+    <meta name="color-scheme" content="light" />
+
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={`${profile.name} — Research Portfolio`} />
+    {socialImage && <meta property="og:image" content={socialImage} />}
+    <meta name="twitter:card" content={socialImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    {socialImage && <meta name="twitter:image" content={socialImage} />}
+
+    <link rel="alternate" type="application/rss+xml" title="Yuanhao Bai — Research Notes" href="/rss.xml" />
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)}></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

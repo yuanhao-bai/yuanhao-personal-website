@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import research from '../data/research.json';
+import projects from '../data/projects.json';
+---
+
+<BaseLayout
+  title="Research"
+  description="Research agenda spanning Embedded AI, TinyML, distributed embedded cyber-physical systems, and safety-critical multimodal perception."
+>
+  <PageIntro
+    eyebrow="Research agenda"
+    title="Efficient intelligence for systems that sense, communicate, and act."
+    description="My research asks how intelligence can move from centralized computation into constrained, distributed, and safety-critical physical systems."
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="narrow prose" style="margin-left: 0">
+        <p class="eyebrow">Research vision</p>
+        <blockquote>
+          Build embedded intelligence that remains useful when compute, energy,
+          communication, and sensing conditions are all limited.
+        </blockquote>
+        <p>
+          Modern AI is often evaluated as if computation and connectivity were abundant.
+          Physical systems impose a different set of requirements: models must fit on devices,
+          sensing is noisy, communication is intermittent, and errors may have real safety
+          consequences.
+        </p>
+        <p>
+          My work connects algorithms with embedded implementation. I am particularly interested
+          in systems where many small devices must adapt and cooperate without relying on a
+          continuously available cloud controller.
+        </p>
+      </div>
+
+      <div class="agenda-map" aria-label="Research agenda progression">
+        <article class="agenda-step">
+          <span>01 · Device</span>
+          <h3>Efficient perception</h3>
+          <p>Run useful learning and sensing workloads within MCU-scale resource budgets.</p>
+        </article>
+        <article class="agenda-step">
+          <span>02 · Network</span>
+          <h3>Distributed adaptation</h3>
+          <p>Coordinate roles, state, and decisions across intermittently connected nodes.</p>
+        </article>
+        <article class="agenda-step">
+          <span>03 · System</span>
+          <h3>Reliable physical action</h3>
+          <p>Translate collective perception into timely and safety-aware system behaviour.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Research pillars</p>
+          <h2>Three connected layers of inquiry.</h2>
+        </div>
+        <p>Each pillar maps directly to current systems work and future PhD research questions.</p>
+      </div>
+      <div class="research-grid">
+        {research.map((area, index) => (
+          <article class="research-card">
+            <span class="research-number">0{index + 1}</span>
+            <h3>{area.title}</h3>
+            <p class="research-kicker">{area.kicker}</p>
+            <p>{area.description}</p>
+            <ul class="tag-list">{area.topics.map((topic) => <li>{topic}</li>)}</ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Current questions</p>
+          <h2>Problems I want to investigate next.</h2>
+        </div>
+        <p>These questions connect the current portfolio to a coherent PhD trajectory.</p>
+      </div>
+      <div class="evidence-grid">
+        <article class="evidence-card">
+          <h3>Collective TinyML</h3>
+          <p>
+            How can homogeneous embedded nodes develop differentiated roles and coordinate
+            learning or inference without centralized orchestration?
+          </p>
+        </article>
+        <article class="evidence-card">
+          <h3>Resource-aware adaptation</h3>
+          <p>
+            How should embedded intelligence adapt when energy, memory, connectivity, and sensing
+            quality change during deployment?
+          </p>
+        </article>
+        <article class="evidence-card">
+          <h3>Multimodal reliability</h3>
+          <p>
+            How can edge systems represent confidence and degrade safely when one or more sensing
+            modalities become unreliable?
+          </p>
+        </article>
+        <article class="evidence-card">
+          <h3>Evaluation on real systems</h3>
+          <p>
+            Which measurements and experimental protocols best connect algorithmic performance
+            with end-to-end embedded system behaviour?
+          </p>
+        </article>
+      </div>
+      <p style="margin-top: 34px">
+        <a class="button button-secondary" href="/projects">Explore research projects</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

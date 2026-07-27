@@ -1,0 +1,56 @@
+[
+  {
+    "date": "2026-07",
+    "displayDate": "July 2026",
+    "year": 2026,
+    "type": "Position",
+    "title": "Joined HKUST(GZ) as a Research Assistant",
+    "description": "Began research at the intersection of embedded intelligence and cyber-physical systems.",
+    "featured": true
+  },
+  {
+    "date": "2026-07",
+    "displayDate": "July 2026",
+    "year": 2026,
+    "type": "Research",
+    "title": "Started AutoRole-Tiny",
+    "description": "Initiated research on autonomous role allocation for homogeneous MCU sensor swarms.",
+    "featured": true
+  },
+  {
+    "date": "2026-06",
+    "displayDate": "June 2026",
+    "year": 2026,
+    "type": "Award",
+    "title": "National Undergraduate Innovation Training Program — Excellent",
+    "description": "Completed the national innovation programme with an Excellent rating.",
+    "featured": true
+  },
+  {
+    "date": "2025-12",
+    "displayDate": "2025",
+    "year": 2025,
+    "type": "Award",
+    "title": "CSU Innovation Annual Conference Excellent Paper Award",
+    "description": "Received recognition for undergraduate research communication.",
+    "featured": false
+  },
+  {
+    "date": "2025-06",
+    "displayDate": "2025",
+    "year": 2025,
+    "type": "Patent",
+    "title": "Multimodal driver fatigue detection system",
+    "description": "Contributed as first inventor to a multimodal driver-monitoring patent.",
+    "featured": true
+  },
+  {
+    "date": "2024-12",
+    "displayDate": "2024",
+    "year": 2024,
+    "type": "Award",
+    "title": "CSU Virtual Simulation Competition — First Prize",
+    "description": "Awarded first prize for simulation-oriented engineering work.",
+    "featured": false
+  }
+]

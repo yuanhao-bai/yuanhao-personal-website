@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Embedded Intelligence",
+    "kicker": "Efficient learning at the edge",
+    "description": "TinyML and embedded AI methods for resource-constrained devices, with attention to memory, energy, latency, and real-world deployment.",
+    "topics": ["TinyML", "Embedded AI", "Edge Intelligence"]
+  },
+  {
+    "title": "Distributed Embedded CPS",
+    "kicker": "Coordination beyond the cloud",
+    "description": "Autonomous role allocation, communication, and collective decision-making in homogeneous MCU swarms and distributed sensor networks.",
+    "topics": ["Embedded CPS", "AIoT", "Sensor Networks"]
+  },
+  {
+    "title": "Safety-critical Perception",
+    "kicker": "Reliable sensing in the physical world",
+    "description": "Multimodal perception systems for transportation and industrial safety, combining vision, audio, environmental, and biosignal sensing.",
+    "topics": ["Multimodal Perception", "Intelligent Transportation", "Safety AI"]
+  }
+]

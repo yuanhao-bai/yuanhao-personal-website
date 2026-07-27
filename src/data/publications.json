@@ -1,0 +1,14 @@
+[
+  {
+    "id": "patent-driver-fatigue",
+    "type": "Patent",
+    "status": "Filed",
+    "year": 2025,
+    "title": "Multimodal Driver Fatigue Detection System",
+    "authors": ["Yuanhao Bai", "Collaborators"],
+    "venue": "Chinese invention patent",
+    "note": "First inventor",
+    "featured": true,
+    "links": []
+  }
+]

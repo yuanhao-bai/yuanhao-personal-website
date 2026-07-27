@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import projects from '../../data/projects.json';
+---
+
+<BaseLayout
+  title="Projects"
+  description="Research projects in distributed TinyML, embedded cyber-physical systems, multimodal fire warning, and driver monitoring."
+>
+  <PageIntro
+    eyebrow="Systems research"
+    title="Projects that connect algorithms with deployable systems."
+    description="Selected work across distributed embedded intelligence, edge-assisted safety monitoring, and multimodal transportation perception."
+  />
+  <section class="section section-soft">
+    <div class="container project-list">
+      {projects.map((project, index) => <ProjectCard project={project} index={index} />)}
+    </div>
+  </section>
+</BaseLayout>

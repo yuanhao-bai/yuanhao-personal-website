@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "autorole-tiny",
+    "title": "AutoRole-Tiny",
+    "subtitle": "Autonomous role allocation for homogeneous TinyML swarms",
+    "status": "Active research",
+    "period": "2026 — Present",
+    "featured": true,
+    "theme": "distributed",
+    "summary": "A distributed TinyML and embedded CPS framework in which homogeneous MCU sensor nodes autonomously assume complementary roles.",
+    "motivation": "MCU swarms are often deployed with identical hardware but face changing sensing, communication, and energy conditions. Fixed roles limit their ability to adapt.",
+    "problem": "How can homogeneous, resource-constrained nodes allocate roles locally while preserving system-level coordination and reliability?",
+    "method": "Explore decentralized state exchange, local utility estimation, lightweight role negotiation, and embedded evaluation under realistic communication constraints.",
+    "hardware": ["nRF52840"],
+    "software": ["Zephyr RTOS", "Bluetooth Low Energy", "C/C++"],
+    "results": "Ongoing: system architecture, node communication, and role-allocation experiments.",
+    "artifacts": ["Research code planned", "System demo planned"]
+  },
+  {
+    "slug": "fireguard",
+    "title": "FireGuard",
+    "subtitle": "Edge-assisted multimodal early warning for underground EV fires",
+    "status": "Research project",
+    "period": "2024 — 2026",
+    "featured": true,
+    "theme": "safety",
+    "summary": "An edge-assisted fire early-warning system that combines thermal, gas, and flame sensing for underground electric-vehicle safety.",
+    "motivation": "Early-stage EV fire signals are heterogeneous and can be difficult to distinguish using a single sensor modality.",
+    "problem": "How can multiple low-cost sensing modalities be fused near the source to improve timeliness and robustness without depending entirely on the cloud?",
+    "method": "Combine thermal imagery and environmental sensing through an edge–device architecture for multimodal event detection and warning.",
+    "hardware": ["Jetson Nano", "ESP32", "Thermal camera", "Gas sensor", "Flame sensor"],
+    "software": ["Edge inference", "Sensor fusion", "Embedded communication"],
+    "results": "System-level research prototype for underground EV fire-safety scenarios.",
+    "artifacts": ["Prototype", "National innovation project"]
+  },
+  {
+    "slug": "driver-monitoring",
+    "title": "Driver Fatigue Multimodal Detection",
+    "subtitle": "Multimodal driver behaviour understanding for transportation safety",
+    "status": "Research project",
+    "period": "2023 — 2025",
+    "featured": true,
+    "theme": "perception",
+    "summary": "A multimodal driver-monitoring system combining visual, audio, and environmental cues to understand fatigue-related behaviour.",
+    "motivation": "Fatigue manifests differently across drivers and operating conditions, making single-modality detection brittle.",
+    "problem": "How can heterogeneous in-cabin signals be combined to improve robustness while remaining suitable for practical deployment?",
+    "method": "Integrate computer vision, audio sensing, and environmental measurements into a multimodal perception pipeline.",
+    "hardware": ["Camera", "Microphone", "Environmental sensors"],
+    "software": ["Computer vision", "Audio sensing", "Multimodal fusion"],
+    "results": "Research system and first-inventor patent contribution.",
+    "artifacts": ["Patent", "Competition project"]
+  }
+]
