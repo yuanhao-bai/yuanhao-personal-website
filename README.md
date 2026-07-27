@@ -35,6 +35,8 @@ frontmatter fields as the existing examples; Astro generates its page automatica
 ## Deployment
 
 The site is fully static and uses `https://yuanhaobai.com` as its canonical origin.
-The production host should run `npm run build` and publish `dist/`.
+Pushes to `main` deploy automatically through GitHub Pages. The Pages build uses a
+repository-aware path prefix; the regular `npm run build` command remains suitable for
+the final custom domain and Sites-compatible hosting.
 
 Before public launch, add verified contact and academic-profile URLs in `profile.json`.
