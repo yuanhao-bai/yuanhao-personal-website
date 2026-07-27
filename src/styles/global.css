@@ -21,7 +21,7 @@ body {
   color: var(--ink);
   background: #fff;
   font-family: var(--sans);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.65;
 }
 
@@ -58,7 +58,7 @@ h1 {
 
 h2 {
   margin-bottom: 14px;
-  font-size: 1.45rem;
+  font-size: 1.55rem;
 }
 
 h3 {
@@ -114,7 +114,7 @@ h3 {
 
 .header-inner nav a {
   color: #4a5660;
-  font-size: 0.9rem;
+  font-size: 0.94rem;
 }
 
 .header-inner nav a[aria-current="page"] {
@@ -220,7 +220,7 @@ h3 {
 
 .project-row h2 {
   margin-bottom: 6px;
-  font-size: 1.25rem;
+  font-size: 1.34rem;
 }
 
 .project-row p {
@@ -266,7 +266,7 @@ h3 {
 }
 
 .topic-list h2 {
-  font-size: 1.25rem;
+  font-size: 1.34rem;
 }
 
 .plain-list {
