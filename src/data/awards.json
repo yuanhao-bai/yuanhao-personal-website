@@ -2,19 +2,43 @@
   {
     "year": 2026,
     "title": "National Undergraduate Innovation Training Program",
-    "level": "Excellent",
-    "organization": "National Undergraduate Innovation and Entrepreneurship Training Program"
+    "level": "Excellent Completion",
+    "organization": "Central South University"
   },
   {
-    "year": 2025,
-    "title": "Innovation Annual Conference Excellent Paper Award",
+    "year": 2026,
+    "title": "CSU Undergraduate Innovation Annual Conference",
     "level": "Excellent Paper",
     "organization": "Central South University"
   },
   {
-    "year": 2024,
-    "title": "Virtual Simulation Competition",
+    "year": 2026,
+    "title": "CSU Virtual Simulation Design Competition",
     "level": "First Prize",
     "organization": "Central South University"
+  },
+  {
+    "year": 2026,
+    "title": "Shenghua Cup Student Entrepreneurship Plan Competition",
+    "level": "Silver Award",
+    "organization": "Central South University"
+  },
+  {
+    "year": 2025,
+    "title": "National Safety Science and Engineering Student Works Competition",
+    "level": "Third Prize",
+    "organization": "National Competition"
+  },
+  {
+    "year": 2025,
+    "title": "China International College Students' Innovation Competition",
+    "level": "CSU Second Prize",
+    "organization": "Central South University"
+  },
+  {
+    "year": 2024,
+    "title": "National Safety Science and Engineering Student Works Competition",
+    "level": "Second Prize",
+    "organization": "National Competition"
   }
 ]

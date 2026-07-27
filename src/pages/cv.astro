@@ -7,113 +7,43 @@ import awards from '../data/awards.json';
 import publications from '../data/publications.json';
 ---
 
-<BaseLayout title="Curriculum Vitae" description="Online curriculum vitae of Yuanhao Bai.">
-  <PageIntro
-    eyebrow="Curriculum vitae"
-    title={profile.name}
-    description={`${profile.role} at ${profile.institutionShort}. Researching embedded AI, TinyML, distributed embedded CPS, and safety-critical multimodal perception.`}
-  />
-
-  <section class="section">
-    <div class="container">
-      <div class="cv-header" style="margin-bottom: 46px">
-        <div>
-          <p class="eyebrow">Online CV</p>
-          <p style="max-width: 720px; color: var(--muted)">
-            This page is generated from the same structured data as the research portfolio,
-            keeping project, award, and output records consistent.
-          </p>
-        </div>
-        <button class="button button-secondary" onclick="window.print()">Print / Save PDF</button>
-      </div>
-
-      <section class="cv-section">
-        <h2>Research interests</h2>
-        <div>
-          <p>
-            Embedded AI · TinyML · Edge Intelligence · Embedded Cyber-Physical Systems · AIoT ·
-            Distributed Sensor Networks · Intelligent Transportation · Multimodal Perception ·
-            Safety-critical AI
-          </p>
-        </div>
-      </section>
-
-      <section class="cv-section">
-        <h2>Experience</h2>
-        <div class="cv-entry">
-          <span class="cv-date">2026 — Present</span>
-          <div>
-            <h3>Research Assistant</h3>
-            <p>{profile.institution}</p>
-            <p>Research in distributed TinyML and embedded cyber-physical systems.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="cv-section">
-        <h2>Education</h2>
-        <div class="cv-entry">
-          <span class="cv-date">Undergraduate</span>
-          <div>
-            <h3>B.Eng. in Safety Engineering</h3>
-            <p>Central South University</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="cv-section">
-        <h2>Projects</h2>
-        <div>
-          {projects.map((project) => (
-            <div class="cv-entry">
-              <span class="cv-date">{project.period}</span>
-              <div>
-                <h3><a href={`/projects/${project.slug}`}>{project.title}</a></h3>
-                <p>{project.summary}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section class="cv-section">
-        <h2>Patents</h2>
-        <div>
-          {publications.map((item) => (
-            <div class="cv-entry">
-              <span class="cv-date">{item.year}</span>
-              <div>
-                <h3>{item.title}</h3>
-                <p>{item.note} · {item.venue}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section class="cv-section" id="awards">
-        <h2>Awards</h2>
-        <div>
-          {awards.map((award) => (
-            <div class="cv-entry">
-              <span class="cv-date">{award.year}</span>
-              <div>
-                <h3>{award.title} — {award.level}</h3>
-                <p>{award.organization}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section class="cv-section">
-        <h2>Technical skills</h2>
-        <div>
-          <p><strong>Embedded:</strong> nRF52840, ESP32, Zephyr RTOS, Bluetooth Low Energy</p>
-          <p><strong>Programming:</strong> C, C++, Python</p>
-          <p><strong>Systems:</strong> TinyML, edge inference, sensor fusion, distributed sensing</p>
-        </div>
-      </section>
-    </div>
+<BaseLayout title="Curriculum Vitae" description="Curriculum vitae of Yuanhao Bai.">
+  <PageIntro title="Curriculum Vitae" description={`${profile.role}, ${profile.institutionShort}`} />
+  <section class="container content-section cv">
+    <button class="print-button" onclick="window.print()">Print / Save PDF</button>
+    <section>
+      <h2>Research interests</h2>
+      <p>Embedded AI, TinyML, distributed embedded CPS, AIoT, and safety-critical perception.</p>
+    </section>
+    <section>
+      <h2>Experience</h2>
+      <div class="cv-row"><time>2026–present</time><p><strong>Research Assistant</strong><br />{profile.institution}</p></div>
+    </section>
+    <section>
+      <h2>Education</h2>
+      <div class="cv-row"><time>Undergraduate</time><p><strong>B.Eng. in Safety Engineering</strong><br />Central South University</p></div>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      {projects.map((project) => (
+        <div class="cv-row"><time>{project.period}</time><p><strong>{project.title}</strong><br />{project.subtitle}</p></div>
+      ))}
+    </section>
+    <section>
+      <h2>Patent</h2>
+      {publications.map((item) => (
+        <div class="cv-row"><time>{item.year}</time><p><strong>{item.title}</strong><br />{item.note}</p></div>
+      ))}
+    </section>
+    <section id="awards">
+      <h2>Selected awards</h2>
+      {awards.map((award) => (
+        <div class="cv-row"><time>{award.year}</time><p><strong>{award.title}</strong><br />{award.level}</p></div>
+      ))}
+    </section>
+    <section>
+      <h2>Technical skills</h2>
+      <p>C/C++, Python, nRF52840, ESP32, Zephyr RTOS, BLE, PyTorch, edge inference, and sensor fusion.</p>
+    </section>
   </section>
 </BaseLayout>

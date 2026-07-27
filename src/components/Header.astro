@@ -9,38 +9,16 @@ const links = [
   { href: '/notes', label: 'Notes' },
   { href: '/cv', label: 'CV' }
 ];
-
-const active = (href: string) =>
-  href === '/' ? pathname === '/' : pathname.startsWith(href);
+const active = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href);
 ---
 
 <header class="site-header">
   <div class="header-inner">
-    <a class="identity" href="/" aria-label="Yuanhao Bai — Home">
-      <span class="identity-name">Yuanhao Bai</span>
-      <span class="identity-role">Research Portfolio</span>
-    </a>
-
-    <nav class="desktop-nav" aria-label="Primary navigation">
+    <a class="identity" href="/">Yuanhao Bai</a>
+    <nav aria-label="Primary navigation">
       {links.map((link) => (
-        <a href={link.href} aria-current={active(link.href) ? 'page' : undefined}>
-          {link.label}
-        </a>
+        <a href={link.href} aria-current={active(link.href) ? 'page' : undefined}>{link.label}</a>
       ))}
     </nav>
-
-    <details class="mobile-nav">
-      <summary aria-label="Open navigation">
-        <span>Menu</span>
-        <span class="menu-mark" aria-hidden="true">≡</span>
-      </summary>
-      <nav aria-label="Mobile navigation">
-        {links.map((link) => (
-          <a href={link.href} aria-current={active(link.href) ? 'page' : undefined}>
-            {link.label}
-          </a>
-        ))}
-      </nav>
-    </details>
   </div>
 </header>

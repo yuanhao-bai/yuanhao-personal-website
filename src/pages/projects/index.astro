@@ -5,18 +5,9 @@ import ProjectCard from '../../components/ProjectCard.astro';
 import projects from '../../data/projects.json';
 ---
 
-<BaseLayout
-  title="Projects"
-  description="Research projects in distributed TinyML, embedded cyber-physical systems, multimodal fire warning, and driver monitoring."
->
-  <PageIntro
-    eyebrow="Systems research"
-    title="Projects that connect algorithms with deployable systems."
-    description="Selected work across distributed embedded intelligence, edge-assisted safety monitoring, and multimodal transportation perception."
-  />
-  <section class="section section-soft">
-    <div class="container project-list">
-      {projects.map((project, index) => <ProjectCard project={project} index={index} />)}
-    </div>
+<BaseLayout title="Projects" description="Selected research projects by Yuanhao Bai.">
+  <PageIntro title="Projects" description="Selected systems research and engineering work." />
+  <section class="container content-section project-list">
+    {projects.map((project) => <ProjectCard project={project} />)}
   </section>
 </BaseLayout>

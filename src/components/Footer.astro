@@ -3,29 +3,12 @@ import profile from '../data/profile.json';
 ---
 
 <footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <p class="footer-name">{profile.name}</p>
-      <p>{profile.role} · {profile.institutionShort}</p>
-      <p>{profile.location}</p>
-    </div>
-    <div>
-      <p class="footer-label">Research</p>
-      <a href="/research">Research agenda</a>
-      <a href="/projects">Selected projects</a>
-      <a href="/publications">Outputs</a>
-    </div>
-    <div>
-      <p class="footer-label">Connect</p>
-      <a href="/cv">Curriculum vitae</a>
-      <a href="/notes">Research notes</a>
+  <div class="container footer-inner">
+    <span>© {new Date().getFullYear()} Yuanhao Bai</span>
+    <span>
+      {profile.email && <a href={`mailto:${profile.email}`}>Email</a>}
       {profile.github && <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>}
-      <a href="/#contact">Collaboration</a>
-    </div>
-    <div class="footer-meta">
-      <p>Built for research exchange.</p>
-      <p>© {new Date().getFullYear()} Yuanhao Bai</p>
-      <p>Last updated July 2026</p>
-    </div>
+      <a href="/rss.xml">RSS</a>
+    </span>
   </div>
 </footer>
