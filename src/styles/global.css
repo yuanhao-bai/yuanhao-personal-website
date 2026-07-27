@@ -66,7 +66,7 @@ h3 {
 }
 
 .container {
-  width: min(900px, calc(100% - 40px));
+  width: min(1040px, calc(100% - 40px));
   margin-inline: auto;
 }
 
@@ -91,7 +91,7 @@ h3 {
 
 .header-inner {
   display: flex;
-  width: min(1040px, calc(100% - 40px));
+  width: min(1120px, calc(100% - 40px));
   min-height: 66px;
   margin-inline: auto;
   align-items: center;
@@ -142,7 +142,7 @@ h3 {
 }
 
 .home-intro p {
-  max-width: 660px;
+  max-width: 780px;
 }
 
 .position {
