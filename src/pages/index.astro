@@ -1,33 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import profile from '../data/profile.json';
 import projects from '../data/projects.json';
-import timeline from '../data/timeline.json';
 import experience from '../data/experience.json';
 
-const recent = timeline.filter((event) => event.featured).slice(0, 4);
 const selectedProjects = projects.slice(0, 3);
 ---
 
 <BaseLayout>
   <section class="home-about container">
-    <p class="eyebrow">Research Portfolio</p>
     <h1>About Me</h1>
     <p>
       I am a Research Assistant at HKUST(GZ), working on embedded AI, TinyML,
       and distributed cyber-physical systems. I study how resource-constrained
       devices can collaborate to sense and make decisions in the physical world.
     </p>
-    <p class="availability">{profile.availability}</p>
-  </section>
-
-  <section class="container content-section">
-    <h2>Research Interests</h2>
-    <p class="interest-line">
-      Embedded AI · TinyML · Edge Intelligence · Embedded CPS · AIoT · Distributed Sensor Networks
-    </p>
-    <p class="secondary">Intelligent transportation · Multimodal perception · Safety-critical AI</p>
+    <p class="research-interests"><strong>Interests:</strong> Embedded AI, TinyML, embedded CPS, and distributed sensor networks.</p>
   </section>
 
   <section class="container content-section">
@@ -42,7 +30,7 @@ const selectedProjects = projects.slice(0, 3);
             <time>{item.period}</time>
             <h3>{item.title}</h3>
             <p class="institution-name">{item.institution}</p>
-            <p>{item.focus} · {item.location}</p>
+            <p>{item.focus}</p>
           </div>
         </article>
       ))}
@@ -61,7 +49,7 @@ const selectedProjects = projects.slice(0, 3);
             <time>{item.period}</time>
             <h3>{item.title}</h3>
             <p class="institution-name">{item.institution}</p>
-            <p>{item.focus} · {item.location}</p>
+            <p>{item.focus}</p>
           </div>
         </article>
       ))}
@@ -78,18 +66,4 @@ const selectedProjects = projects.slice(0, 3);
     </div>
   </section>
 
-  <section class="container content-section">
-    <div class="section-title">
-      <h2>Recent News</h2>
-      <a href="/timeline">Full timeline</a>
-    </div>
-    <div class="simple-list">
-      {recent.map((event) => (
-        <div>
-          <time>{event.displayDate}</time>
-          <p>{event.title}</p>
-        </div>
-      ))}
-    </div>
-  </section>
 </BaseLayout>

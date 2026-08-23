@@ -73,10 +73,10 @@ h3 {
 .site-shell {
   display: grid;
   grid-template-columns: 238px minmax(0, 1fr);
-  gap: clamp(44px, 6vw, 76px);
+  gap: clamp(36px, 5vw, 60px);
   width: min(1200px, calc(100% - 48px));
   margin-inline: auto;
-  padding-top: 54px;
+  padding-top: 38px;
 }
 
 .page-content {
@@ -183,26 +183,22 @@ h3 {
 }
 
 .home-about {
-  padding: 2px 0 34px;
+  padding: 0 0 24px;
 }
 
 .home-about h1 {
-  margin-bottom: 18px;
-  font-size: clamp(2.2rem, 5vw, 3rem);
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 4vw, 2.6rem);
 }
 
 .home-about > p:not(.eyebrow) {
   max-width: 790px;
 }
 
-.availability {
-  margin-top: 18px;
-  margin-bottom: 0;
-  color: var(--blue);
-}
-
-.interest-line {
-  margin-bottom: 5px;
+.research-interests {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .meta,
@@ -213,8 +209,14 @@ h3 {
 }
 
 .content-section {
-  padding: 32px 0;
+  padding: 23px 0;
   border-top: 1px solid var(--line);
+}
+
+.content-section > h2,
+.section-title > h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
 }
 
 .section-title {
@@ -261,7 +263,7 @@ h3 {
   display: grid;
   grid-template-columns: 120px 1fr;
   gap: 24px;
-  padding: 24px 0;
+  padding: 17px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -350,17 +352,17 @@ h3 {
 
 .institution-row {
   display: grid;
-  grid-template-columns: 136px 1fr;
-  gap: 26px;
+  grid-template-columns: 96px 1fr;
+  gap: 20px;
   align-items: center;
-  padding: 24px 0;
+  padding: 17px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .institution-logo {
   display: flex;
-  width: 126px;
-  height: 82px;
+  width: 84px;
+  height: 72px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -375,13 +377,18 @@ h3 {
 
 .institution-logo.hkust-logo {
   height: 72px;
-  padding: 15px 12px;
-  background: #123b63;
+  padding: 3px;
+  background: transparent;
+}
+
+.institution-logo.hkust-logo img {
+  width: 68px;
+  height: 68px;
 }
 
 .institution-logo.csu-logo img {
-  width: 80px;
-  height: 80px;
+  width: 68px;
+  height: 68px;
 }
 
 .institution-row time {
@@ -393,7 +400,7 @@ h3 {
 
 .institution-row h3 {
   margin-bottom: 3px;
-  font-size: 1.2rem;
+  font-size: 1.12rem;
 }
 
 .institution-row p {
@@ -505,7 +512,7 @@ h3 {
 }
 
 .site-footer {
-  margin-top: 50px;
+  margin-top: 28px;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.82rem;
