@@ -5,17 +5,19 @@ import publications from '../data/publications.json';
 ---
 
 <BaseLayout title="Publications" description="Research outputs by Yuanhao Bai.">
-  <PageIntro title="Publications & Patents" />
+  <PageIntro title="Publications" description="Publications, patents, and ongoing research outputs." />
   <section class="container content-section">
-    {publications.map((item) => (
-      <article class="publication-row">
-        <span>{item.year}</span>
-        <div>
-          <h2>{item.title}</h2>
-          <p>{item.type} · {item.status} · {item.note}</p>
-        </div>
-      </article>
-    ))}
-    <p class="secondary">Peer-reviewed publications will be added as they become available.</p>
+    <h2 class="publication-year">2025</h2>
+    <div class="publication-list">
+      {publications.map((item) => (
+        <article class="publication-row">
+          <span>{item.type}</span>
+          <div>
+            <h2>{item.title}</h2>
+            <p><strong>{item.note}</strong> · {item.venue} · {item.status}</p>
+          </div>
+        </article>
+      ))}
+    </div>
   </section>
 </BaseLayout>

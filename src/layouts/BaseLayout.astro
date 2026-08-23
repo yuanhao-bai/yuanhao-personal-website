@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ProfileSidebar from '../components/ProfileSidebar.astro';
 import '../styles/global.css';
 import profile from '../data/profile.json';
 
@@ -76,8 +77,11 @@ const personSchema = {
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <Header />
-    <main id="main-content">
-      <slot />
+    <main id="main-content" class="site-shell">
+      <ProfileSidebar />
+      <div class="page-content">
+        <slot />
+      </div>
     </main>
     <Footer />
   </body>

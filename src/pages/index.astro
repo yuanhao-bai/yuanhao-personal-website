@@ -4,55 +4,83 @@ import ProjectCard from '../components/ProjectCard.astro';
 import profile from '../data/profile.json';
 import projects from '../data/projects.json';
 import timeline from '../data/timeline.json';
+import experience from '../data/experience.json';
 
-const recent = timeline.filter((event) => event.featured).slice(0, 5);
+const recent = timeline.filter((event) => event.featured).slice(0, 4);
+const selectedProjects = projects.slice(0, 3);
 ---
 
 <BaseLayout>
-  <section class="home-intro container">
-    <img src="/profile.jpg" alt="Yuanhao Bai" width="460" height="460" />
-    <div>
-      <h1>Yuanhao Bai</h1>
-      <p class="position">{profile.role}, {profile.institutionShort}</p>
-      <p>
-        I work on embedded AI, TinyML, and distributed cyber-physical systems.
-        My current research studies how resource-constrained devices can coordinate
-        sensing and decision-making in real-world environments.
-      </p>
-      <p class="meta">{profile.education}</p>
-      <p class="profile-links">
-        <a href={`mailto:${profile.email}`}>Email</a>
-        <a href="/cv">CV</a>
-        <a href="/publications">Publications</a>
-        <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
-      </p>
+  <section class="home-about container">
+    <p class="eyebrow">Research Portfolio</p>
+    <h1>About Me</h1>
+    <p>
+      I am a Research Assistant at HKUST(GZ), working on embedded AI, TinyML,
+      and distributed cyber-physical systems. I study how resource-constrained
+      devices can collaborate to sense and make decisions in the physical world.
+    </p>
+    <p class="availability">{profile.availability}</p>
+  </section>
+
+  <section class="container content-section">
+    <h2>Research Interests</h2>
+    <p class="interest-line">
+      Embedded AI · TinyML · Edge Intelligence · Embedded CPS · AIoT · Distributed Sensor Networks
+    </p>
+    <p class="secondary">Intelligent transportation · Multimodal perception · Safety-critical AI</p>
+  </section>
+
+  <section class="container content-section">
+    <h2>Research Experience</h2>
+    <div class="institution-list">
+      {experience.research.map((item) => (
+        <article class="institution-row">
+          <div class={`institution-logo ${item.logoClass}`}>
+            <img src={item.logo} alt={`${item.institution} logo`} loading="lazy" />
+          </div>
+          <div>
+            <time>{item.period}</time>
+            <h3>{item.title}</h3>
+            <p class="institution-name">{item.institution}</p>
+            <p>{item.focus} · {item.location}</p>
+          </div>
+        </article>
+      ))}
     </div>
   </section>
 
   <section class="container content-section">
-    <h2>Research interests</h2>
-    <p>
-      Embedded AI · TinyML · Edge Intelligence · Embedded Cyber-Physical Systems ·
-      AIoT · Distributed Sensor Networks
-    </p>
-    <p class="secondary">
-      Intelligent transportation, multimodal perception, and safety-critical AI.
-    </p>
+    <h2>Education</h2>
+    <div class="institution-list">
+      {experience.education.map((item) => (
+        <article class="institution-row">
+          <div class={`institution-logo ${item.logoClass}`}>
+            <img src={item.logo} alt={`${item.institution} logo`} loading="lazy" />
+          </div>
+          <div>
+            <time>{item.period}</time>
+            <h3>{item.title}</h3>
+            <p class="institution-name">{item.institution}</p>
+            <p>{item.focus} · {item.location}</p>
+          </div>
+        </article>
+      ))}
+    </div>
   </section>
 
   <section class="container content-section">
     <div class="section-title">
-      <h2>Selected projects</h2>
-      <a href="/projects">All projects</a>
+      <h2>Selected Projects</h2>
+      <a href="/projects">View all</a>
     </div>
     <div class="project-list">
-      {projects.map((project) => <ProjectCard project={project} />)}
+      {selectedProjects.map((project) => <ProjectCard project={project} />)}
     </div>
   </section>
 
   <section class="container content-section">
     <div class="section-title">
-      <h2>Recent updates</h2>
+      <h2>Recent News</h2>
       <a href="/timeline">Full timeline</a>
     </div>
     <div class="simple-list">
@@ -63,14 +91,5 @@ const recent = timeline.filter((event) => event.featured).slice(0, 5);
         </div>
       ))}
     </div>
-  </section>
-
-  <section class="container content-section" id="contact">
-    <h2>Contact</h2>
-    <p>
-      I am interested in PhD opportunities and research collaborations in embedded
-      intelligence and networked physical systems.
-    </p>
-    <p>{profile.institution}</p>
   </section>
 </BaseLayout>

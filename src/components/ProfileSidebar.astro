@@ -1,0 +1,18 @@
+---
+import profile from '../data/profile.json';
+---
+
+<aside class="profile-sidebar" aria-label="Profile">
+  <img class="profile-photo" src="/profile.jpg" alt="Yuanhao Bai" width="360" height="360" />
+  <div class="profile-summary">
+    <h1><a href="/">{profile.name}</a></h1>
+    <p class="profile-role">{profile.role}</p>
+    <p class="profile-affiliation">{profile.institutionShort}</p>
+    <p class="profile-location">{profile.location}</p>
+    <nav class="profile-contact" aria-label="Profile links">
+      <a href={`mailto:${profile.email}`}>Email</a>
+      <a href="/cv">Curriculum Vitae</a>
+      <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </div>
+</aside>

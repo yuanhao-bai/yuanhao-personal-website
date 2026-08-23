@@ -1,0 +1,24 @@
+{
+  "research": [
+    {
+      "period": "July 2026 – Present",
+      "title": "Research Assistant",
+      "institution": "The Hong Kong University of Science and Technology (Guangzhou)",
+      "location": "Guangzhou, China",
+      "focus": "Distributed TinyML and embedded cyber-physical systems",
+      "logo": "/hkustgz-logo.png",
+      "logoClass": "hkust-logo"
+    }
+  ],
+  "education": [
+    {
+      "period": "Undergraduate",
+      "title": "B.Eng. Student in Safety Engineering",
+      "institution": "Central South University",
+      "location": "Changsha, China",
+      "focus": "Embedded AI and intelligent safety systems",
+      "logo": "/csu-logo.png",
+      "logoClass": "csu-logo"
+    }
+  ]
+}
