@@ -50,10 +50,10 @@
   "education": [
     {
       "period": "Feb 2027 – Jun 2027 (planned)",
-      "title": "Incoming Exchange Student",
+      "title": "Incoming CSC-Sponsored Exchange Student",
       "institution": "University of York",
       "location": "York, United Kingdom",
-      "focus": "Undergraduate exchange study",
+      "focus": "China Scholarship Council (CSC) Government-Sponsored Study Abroad Program",
       "logoClass": "york-logo",
       "logos": [
         {
@@ -67,7 +67,7 @@
       "title": "B.Eng. in Safety Engineering",
       "institution": "Central South University",
       "location": "Changsha, China",
-      "focus": "Academic average: 88.93/100 · Major rank: 12/71 (Top 17%)",
+      "focus": "Changsha, China",
       "logoClass": "csu-logo",
       "logos": [
         {
