@@ -390,6 +390,16 @@ h3 {
   height: 68px;
 }
 
+.institution-logo.joint-logo {
+  gap: 8px;
+  width: 92px;
+}
+
+.institution-logo.joint-logo img {
+  width: 40px;
+  height: 52px;
+}
+
 .institution-logo.csu-logo img {
   width: 68px;
   height: 68px;

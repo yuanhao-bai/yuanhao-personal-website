@@ -1,13 +1,36 @@
 {
   "research": [
     {
-      "period": "July 2026 – Present",
+      "period": "Sep 2026 – Present",
+      "title": "AI Infrastructure Research Contributor",
+      "institution": "Huawei–University of Macau Joint Research Project",
+      "location": "Macao, China",
+      "focus": "Efficient NPU inference runtime for resource-constrained smart glasses",
+      "logoClass": "joint-logo",
+      "logos": [
+        {
+          "src": "/huawei-logo.svg",
+          "alt": "Huawei logo"
+        },
+        {
+          "src": "/um-logo.svg",
+          "alt": "University of Macau logo"
+        }
+      ]
+    },
+    {
+      "period": "Jul 2026 – Present",
       "title": "Research Assistant",
       "institution": "HKUST (Guangzhou)",
       "location": "Guangzhou, China",
       "focus": "Distributed TinyML and embedded cyber-physical systems",
-      "logo": "/hkustgz-crest.png",
-      "logoClass": "hkust-logo"
+      "logoClass": "hkust-logo",
+      "logos": [
+        {
+          "src": "/hkustgz-crest.png",
+          "alt": "HKUST (Guangzhou) logo"
+        }
+      ]
     },
     {
       "period": "Mar 2025 – Jun 2026",
@@ -15,8 +38,13 @@
       "institution": "AIFMWS Lab, Central South University",
       "location": "Changsha, China",
       "focus": "Multimodal fire-risk detection and intervention",
-      "logo": "/csu-logo.png",
-      "logoClass": "csu-logo"
+      "logoClass": "csu-logo",
+      "logos": [
+        {
+          "src": "/csu-logo.png",
+          "alt": "Central South University logo"
+        }
+      ]
     }
   ],
   "education": [
@@ -26,8 +54,13 @@
       "institution": "Central South University",
       "location": "Changsha, China",
       "focus": "Academic average: 88.93/100 · Major rank: 12/71 (Top 17%)",
-      "logo": "/csu-logo.png",
-      "logoClass": "csu-logo"
+      "logoClass": "csu-logo",
+      "logos": [
+        {
+          "src": "/csu-logo.png",
+          "alt": "Central South University logo"
+        }
+      ]
     }
   ]
 }

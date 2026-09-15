@@ -24,7 +24,7 @@ const selectedProjects = projects.slice(0, 3);
       {experience.research.map((item) => (
         <article class="institution-row">
           <div class={`institution-logo ${item.logoClass}`}>
-            <img src={item.logo} alt={`${item.institution} logo`} loading="lazy" />
+            {item.logos.map((logo) => <img src={logo.src} alt={logo.alt} loading="lazy" />)}
           </div>
           <div>
             <time>{item.period}</time>
@@ -43,7 +43,7 @@ const selectedProjects = projects.slice(0, 3);
       {experience.education.map((item) => (
         <article class="institution-row">
           <div class={`institution-logo ${item.logoClass}`}>
-            <img src={item.logo} alt={`${item.institution} logo`} loading="lazy" />
+            {item.logos.map((logo) => <img src={logo.src} alt={logo.alt} loading="lazy" />)}
           </div>
           <div>
             <time>{item.period}</time>

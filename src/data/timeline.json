@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-09",
+    "displayDate": "September 2026",
+    "year": 2026,
+    "type": "Research",
+    "title": "Joined a Huawei–University of Macau joint research project",
+    "description": "AI infrastructure research for efficient NPU inference on resource-constrained smart glasses.",
+    "featured": true
+  },
+  {
     "date": "2026-07",
     "displayDate": "July 2026",
     "year": 2026,
