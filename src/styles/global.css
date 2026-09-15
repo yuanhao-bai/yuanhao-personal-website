@@ -405,6 +405,11 @@ h3 {
   height: 68px;
 }
 
+.institution-logo.york-logo img {
+  width: 68px;
+  height: 68px;
+}
+
 .institution-row time {
   display: block;
   margin-bottom: 3px;

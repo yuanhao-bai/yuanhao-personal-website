@@ -49,6 +49,20 @@
   ],
   "education": [
     {
+      "period": "Feb 2027 – Jun 2027 (planned)",
+      "title": "Incoming Exchange Student",
+      "institution": "University of York",
+      "location": "York, United Kingdom",
+      "focus": "Undergraduate exchange study",
+      "logoClass": "york-logo",
+      "logos": [
+        {
+          "src": "/york-logo.svg",
+          "alt": "University of York logo"
+        }
+      ]
+    },
+    {
       "period": "Sep 2023 – Jun 2027 (expected)",
       "title": "B.Eng. in Safety Engineering",
       "institution": "Central South University",
