@@ -5,6 +5,9 @@ import profile from '../data/profile.json';
 import projects from '../data/projects.json';
 import awards from '../data/awards.json';
 import publications from '../data/publications.json';
+
+const papers = publications.filter((item) => item.type !== 'Patent');
+const patents = publications.filter((item) => item.type === 'Patent');
 ---
 
 <BaseLayout title="Curriculum Vitae" description="Curriculum vitae of Yuanhao Bai.">
@@ -13,15 +16,16 @@ import publications from '../data/publications.json';
     <button class="print-button" onclick="window.print()">Print / Save PDF</button>
     <section>
       <h2>Research interests</h2>
-      <p>Embedded AI, TinyML, distributed embedded CPS, AIoT, and safety-critical perception.</p>
+      <p>Multi-agent reinforcement learning, distributed and resource-aware AI systems, TinyML, and multimodal sensing.</p>
     </section>
     <section>
-      <h2>Experience</h2>
-      <div class="cv-row"><time>2026–present</time><p><strong>Research Assistant</strong><br />{profile.institution}</p></div>
+      <h2>Research Experience</h2>
+      <div class="cv-row"><time>Jul 2026–present</time><p><strong>Research Assistant, ATOMIC Lab</strong><br />{profile.institution}</p></div>
+      <div class="cv-row"><time>Mar 2025–Jun 2026</time><p><strong>Project Lead, FireGuard</strong><br />AIFMWS Lab, Central South University</p></div>
     </section>
     <section>
       <h2>Education</h2>
-      <div class="cv-row"><time>Undergraduate</time><p><strong>B.Eng. in Safety Engineering</strong><br />Central South University</p></div>
+      <div class="cv-row"><time>Sep 2023–Jun 2027</time><p><strong>B.Eng. in Safety Engineering</strong><br />Central South University · Expected June 2027</p></div>
     </section>
     <section>
       <h2>Projects</h2>
@@ -30,9 +34,15 @@ import publications from '../data/publications.json';
       ))}
     </section>
     <section>
-      <h2>Patent</h2>
-      {publications.map((item) => (
-        <div class="cv-row"><time>{item.year}</time><p><strong>{item.title}</strong><br />{item.note}</p></div>
+      <h2>Publications</h2>
+      {papers.map((item) => (
+        <div class="cv-row"><time>{item.status}</time><p><strong>{item.title}</strong><br />{item.authors.join(', ')} · {item.venue}</p></div>
+      ))}
+    </section>
+    <section>
+      <h2>Patents</h2>
+      {patents.map((item) => (
+        <div class="cv-row"><time>{item.year}</time><p><strong>{item.title}</strong><br />{item.venue} · {item.note} · {item.status}</p></div>
       ))}
     </section>
     <section id="awards">
@@ -43,7 +53,7 @@ import publications from '../data/publications.json';
     </section>
     <section>
       <h2>Technical skills</h2>
-      <p>C/C++, Python, nRF52840, ESP32, Zephyr RTOS, BLE, PyTorch, edge inference, and sensor fusion.</p>
+      <p>Python, C/C++, Git/GitHub, PyTorch, OpenCV, nRF52840/Zephyr, BLE, ESP32, Jetson Nano, RK3568/RKNN, CMSIS-NN, QAT/INT8 inference, and embedded profiling.</p>
     </section>
   </section>
 </BaseLayout>

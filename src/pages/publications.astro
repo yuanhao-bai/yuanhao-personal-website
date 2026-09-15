@@ -2,19 +2,36 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageIntro from '../components/PageIntro.astro';
 import publications from '../data/publications.json';
+
+const papers = publications.filter((item) => item.type !== 'Patent');
+const patents = publications.filter((item) => item.type === 'Patent');
 ---
 
 <BaseLayout title="Publications" description="Research outputs by Yuanhao Bai.">
   <PageIntro title="Publications" description="Publications, patents, and ongoing research outputs." />
   <section class="container content-section">
-    <h2 class="publication-year">2025</h2>
+    <h2 class="publication-year">Papers</h2>
     <div class="publication-list">
-      {publications.map((item) => (
+      {papers.map((item) => (
         <article class="publication-row">
           <span>{item.type}</span>
           <div>
             <h2>{item.title}</h2>
-            <p><strong>{item.note}</strong> · {item.venue} · {item.status}</p>
+            <p>{item.authors.join(', ')}</p>
+            <p class="meta">{item.venue} · {item.status} · {item.note}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+    <h2 class="publication-year publication-section-title">Patents</h2>
+    <div class="publication-list">
+      {patents.map((item) => (
+        <article class="publication-row">
+          <span>{item.type}</span>
+          <div>
+            <h2>{item.title}</h2>
+            <p>{item.venue}</p>
+            <p class="meta">{item.status} · {item.note}</p>
           </div>
         </article>
       ))}

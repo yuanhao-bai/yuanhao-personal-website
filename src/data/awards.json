@@ -1,44 +1,38 @@
 [
   {
     "year": 2026,
-    "title": "National Undergraduate Innovation Training Program",
-    "level": "Excellent Completion",
+    "title": "12th National College Student Safety Science and Engineering Practice and Innovation Works Competition",
+    "level": "National First Prize · Team Lead",
+    "organization": "National Competition"
+  },
+  {
+    "year": 2026,
+    "title": "National Undergraduate Innovation and Entrepreneurship Training Program",
+    "level": "Excellent Completion · Project Lead",
+    "organization": "Central South University"
+  },
+  {
+    "year": 2026,
+    "title": "10th Central South University Virtual Simulation Design Competition",
+    "level": "First Prize · Project Lead",
     "organization": "Central South University"
   },
   {
     "year": 2026,
     "title": "CSU Undergraduate Innovation Annual Conference",
-    "level": "Excellent Paper",
-    "organization": "Central South University"
-  },
-  {
-    "year": 2026,
-    "title": "CSU Virtual Simulation Design Competition",
-    "level": "First Prize",
-    "organization": "Central South University"
-  },
-  {
-    "year": 2026,
-    "title": "Shenghua Cup Student Entrepreneurship Plan Competition",
-    "level": "Silver Award",
+    "level": "Excellent Paper Award and Excellent Case Award",
     "organization": "Central South University"
   },
   {
     "year": 2025,
-    "title": "National Safety Science and Engineering Student Works Competition",
-    "level": "Third Prize",
+    "title": "National College Student Safety Science and Engineering Practice and Innovation Works Competition",
+    "level": "National Third Prize · Team Lead",
     "organization": "National Competition"
   },
   {
-    "year": 2025,
-    "title": "China International College Students' Innovation Competition",
-    "level": "CSU Second Prize",
-    "organization": "Central South University"
-  },
-  {
     "year": 2024,
-    "title": "National Safety Science and Engineering Student Works Competition",
-    "level": "Second Prize",
+    "title": "National College Student Safety Science and Engineering Practice and Innovation Works Competition",
+    "level": "National Second Prize · Team Lead",
     "organization": "National Competition"
   }
 ]

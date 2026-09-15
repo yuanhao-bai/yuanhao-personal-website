@@ -8,15 +8,24 @@
       "focus": "Distributed TinyML and embedded cyber-physical systems",
       "logo": "/hkustgz-crest.png",
       "logoClass": "hkust-logo"
+    },
+    {
+      "period": "Mar 2025 – Jun 2026",
+      "title": "Project Lead, FireGuard",
+      "institution": "AIFMWS Lab, Central South University",
+      "location": "Changsha, China",
+      "focus": "Multimodal fire-risk detection and intervention",
+      "logo": "/csu-logo.png",
+      "logoClass": "csu-logo"
     }
   ],
   "education": [
     {
-      "period": "Undergraduate",
-      "title": "B.Eng. Student in Safety Engineering",
+      "period": "Sep 2023 – Jun 2027 (expected)",
+      "title": "B.Eng. in Safety Engineering",
       "institution": "Central South University",
       "location": "Changsha, China",
-      "focus": "Embedded AI and intelligent safety systems",
+      "focus": "Academic average: 88.93/100 · Major rank: 12/71 (Top 17%)",
       "logo": "/csu-logo.png",
       "logoClass": "csu-logo"
     }

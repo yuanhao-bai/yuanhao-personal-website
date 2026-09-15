@@ -4,8 +4,8 @@
     "displayDate": "July 2026",
     "year": 2026,
     "type": "Position",
-    "title": "Joined HKUST(GZ) as a Research Assistant",
-    "description": "Research on distributed TinyML and embedded cyber-physical systems.",
+    "title": "Joined ATOMIC Lab at HKUST(GZ) as a Research Assistant",
+    "description": "Working on AutoRole-Tiny and distributed embedded intelligence.",
     "featured": true
   },
   {
@@ -13,80 +13,89 @@
     "displayDate": "July 2026",
     "year": 2026,
     "type": "Research",
-    "title": "Started AutoRole-Tiny",
-    "description": "Autonomous role allocation for homogeneous MCU sensor swarms.",
+    "title": "Started AutoRole-Tiny and SAtom research",
+    "description": "MCU sensor swarms and swarm-based object manipulation.",
     "featured": true
+  },
+  {
+    "date": "2026-07",
+    "displayDate": "July 2026",
+    "year": 2026,
+    "type": "Project",
+    "title": "Deployed an oriented fastener detector on RK3568",
+    "description": "INT8 YOLOv8s-OBB edge inference and deployment validation.",
+    "featured": false
   },
   {
     "date": "2026-06",
     "displayDate": "June 2026",
     "year": 2026,
-    "type": "Award",
-    "title": "National Innovation Project — Excellent Completion",
-    "description": "Certificate verified.",
+    "type": "Research",
+    "title": "Completed FireGuard with an Excellent rating",
+    "description": "National Undergraduate Innovation and Entrepreneurship Training Program.",
     "featured": true
   },
   {
-    "date": "2026-06",
-    "displayDate": "June 2026",
+    "date": "2026-05",
+    "displayDate": "May 2026",
     "year": 2026,
     "type": "Award",
-    "title": "CSU Innovation Annual Conference — Excellent Paper",
-    "description": "Certificate verified.",
+    "title": "First Prize in the CSU Virtual Simulation Design Competition",
+    "description": "LLM-augmented multi-agent emergency evacuation simulation.",
     "featured": true
   },
   {
-    "date": "2026-06",
-    "displayDate": "June 2026",
+    "date": "2026-01",
+    "displayDate": "January 2026",
+    "year": 2026,
+    "type": "Research",
+    "title": "Started multimodal driver fatigue and distraction monitoring",
+    "description": "Visual, audio, and environmental sensing with graded warning logic.",
+    "featured": false
+  },
+  {
+    "date": "2026",
+    "displayDate": "2026",
     "year": 2026,
     "type": "Award",
-    "title": "CSU Virtual Simulation Design Competition — First Prize",
-    "description": "Certificate dated June 2026.",
+    "title": "National First Prize in the 12th Safety Science and Engineering Works Competition",
+    "description": "Team Lead.",
     "featured": true
   },
   {
-    "date": "2026-04",
-    "displayDate": "April 2026",
+    "date": "2026",
+    "displayDate": "2026",
     "year": 2026,
-    "type": "Award",
-    "title": "Shenghua Cup — Silver Award",
-    "description": "Student entrepreneurship plan competition.",
-    "featured": false
-  },
-  {
-    "date": "2025-08",
-    "displayDate": "August 2025",
-    "year": 2025,
-    "type": "Award",
-    "title": "National Safety Works Competition — Third Prize",
-    "description": "Eleventh national competition.",
-    "featured": false
-  },
-  {
-    "date": "2025",
-    "displayDate": "2025",
-    "year": 2025,
-    "type": "Award",
-    "title": "China International College Students' Innovation Competition — CSU Second Prize",
-    "description": "Campus-level award.",
-    "featured": false
-  },
-  {
-    "date": "2025",
-    "displayDate": "2025",
-    "year": 2025,
     "type": "Patent",
-    "title": "Multimodal Driver Fatigue Detection System",
-    "description": "First inventor.",
+    "title": "Two invention patent applications accepted by CNIPA",
+    "description": "First-listed inventor for FireGuard and second-listed co-inventor for driver monitoring.",
     "featured": false
   },
   {
-    "date": "2024-12",
-    "displayDate": "December 2024",
+    "date": "2025-03",
+    "displayDate": "March 2025",
+    "year": 2025,
+    "type": "Research",
+    "title": "Started FireGuard at AIFMWS Lab",
+    "description": "Led multimodal fire-risk detection and intervention research.",
+    "featured": false
+  },
+  {
+    "date": "2025",
+    "displayDate": "2025",
+    "year": 2025,
+    "type": "Award",
+    "title": "National Third Prize in the Safety Science and Engineering Works Competition",
+    "description": "Team Lead.",
+    "featured": false
+  },
+  {
+    "date": "2024",
+    "displayDate": "2024",
     "year": 2024,
     "type": "Award",
-    "title": "National Safety Works Competition — Second Prize",
-    "description": "Tenth national competition.",
+    "title": "National Second Prize in the Safety Science and Engineering Works Competition",
+    "description": "Team Lead.",
     "featured": false
   }
 ]

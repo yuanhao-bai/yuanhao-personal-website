@@ -1,13 +1,49 @@
 [
   {
-    "id": "patent-driver-fatigue",
+    "id": "autorole-tiny-sensys-2027",
+    "type": "Manuscript",
+    "status": "In preparation for submission",
+    "year": 2026,
+    "title": "AutoRole-Tiny: Single-Genome Role Differentiation for Collective Inference on MCU Sensor Swarms",
+    "authors": ["G. Yao*", "Y. Bai*", "T. Chang"],
+    "venue": "ACM/IEEE SenSys 2027",
+    "note": "Equal contribution",
+    "featured": true,
+    "links": []
+  },
+  {
+    "id": "satom-icra-2027",
+    "type": "Paper",
+    "status": "Submitted",
+    "year": 2026,
+    "title": "SAtom: Swarms as Tools for Object Manipulation",
+    "authors": ["K. Wang", "H. Zheng", "Y. Bai", "et al."],
+    "venue": "IEEE ICRA 2027",
+    "note": "Co-author",
+    "featured": true,
+    "links": []
+  },
+  {
+    "id": "patent-fireguard",
     "type": "Patent",
-    "status": "Filed",
-    "year": 2025,
-    "title": "Multimodal Driver Fatigue Detection System",
+    "status": "Accepted by CNIPA",
+    "year": 2026,
+    "title": "FireGuard Multimodal Fire-Risk Early Warning and Intervention Method/System",
     "authors": ["Yuanhao Bai", "Collaborators"],
-    "venue": "Chinese invention patent",
-    "note": "First inventor",
+    "venue": "Chinese invention patent application No. 202610514577.7",
+    "note": "First-listed inventor",
+    "featured": true,
+    "links": []
+  },
+  {
+    "id": "patent-driver-monitoring",
+    "type": "Patent",
+    "status": "Accepted by CNIPA; fast pre-examination passed",
+    "year": 2026,
+    "title": "Multimodal Driver Fatigue and Distraction Detection Method/System",
+    "authors": ["Collaborators", "Yuanhao Bai"],
+    "venue": "Chinese invention patent application No. 202611195180.2",
+    "note": "Co-inventor, second-listed",
     "featured": true,
     "links": []
   }

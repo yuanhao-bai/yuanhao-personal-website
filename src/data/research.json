@@ -1,20 +1,20 @@
 [
   {
-    "title": "Embedded Intelligence",
-    "kicker": "Efficient learning at the edge",
-    "description": "TinyML and embedded AI methods for resource-constrained devices, with attention to memory, energy, latency, and real-world deployment.",
+    "title": "Multi-Agent Reinforcement Learning",
+    "kicker": "Learning to coordinate",
+    "description": "Decentralized learning and collective decision-making for homogeneous agents operating from local observations.",
+    "topics": ["Multi-Agent Systems", "Decentralized Policies", "Collective Intelligence"]
+  },
+  {
+    "title": "Distributed and Resource-Aware AI",
+    "kicker": "Intelligence under constraints",
+    "description": "AI methods and deployment workflows that account for memory, energy, latency, and communication limits on embedded devices.",
     "topics": ["TinyML", "Embedded AI", "Edge Intelligence"]
   },
   {
-    "title": "Distributed Embedded CPS",
-    "kicker": "Coordination beyond the cloud",
-    "description": "Autonomous role allocation, communication, and collective decision-making in homogeneous MCU swarms and distributed sensor networks.",
-    "topics": ["Embedded CPS", "AIoT", "Sensor Networks"]
-  },
-  {
-    "title": "Safety-critical Perception",
-    "kicker": "Reliable sensing in the physical world",
-    "description": "Multimodal perception systems for transportation and industrial safety, combining vision, audio, environmental, and biosignal sensing.",
-    "topics": ["Multimodal Perception", "Intelligent Transportation", "Safety AI"]
+    "title": "TinyML and Multimodal Sensing",
+    "kicker": "Perception in the physical world",
+    "description": "Multimodal systems that combine visual, acoustic, and environmental signals for robust real-world sensing.",
+    "topics": ["Multimodal Fusion", "Sensor Systems", "Safety Applications"]
   }
 ]
