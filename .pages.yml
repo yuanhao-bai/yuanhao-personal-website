@@ -52,6 +52,8 @@ content:
             default: false
             description: Keep three projects enabled for the cleanest homepage layout.
           - { name: badge, label: Card badge, type: string, required: false }
+          - { name: coverAlt, label: Image description, type: string, required: false }
+          - { name: coverCaption, label: Image caption, type: string, required: false }
           - name: cover
             label: Cover image
             type: image
@@ -66,6 +68,8 @@ content:
             options:
               values:
                 - { name: image, label: Uploaded image }
+                - { name: paper, label: Paper figure crop }
+                - { name: paper-action, label: Paper action figure crop }
                 - { name: npu, label: NPU diagram }
                 - { name: swarm, label: Swarm diagram }
                 - { name: plain, label: Plain title cover }
@@ -82,3 +86,24 @@ content:
           - { name: software, label: Software and methods, type: string, list: true, required: false }
           - { name: results, label: Results or current status, type: text }
           - { name: artifacts, label: Publications and artifacts, type: string, list: true, required: false }
+          - name: figures
+            label: Selected figures on project page
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{caption}"
+            required: false
+            fields:
+              - name: src
+                label: Figure image
+                type: image
+                options:
+                  path: projects
+                  extensions: [jpg, jpeg, png, webp]
+              - { name: caption, label: Caption, type: string }
+              - name: kind
+                label: Figure display
+                type: select
+                options:
+                  values: [standard, satom-action, satom-overview]

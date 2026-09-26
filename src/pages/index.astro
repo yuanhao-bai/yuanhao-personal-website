@@ -9,13 +9,13 @@ const currentProjects = projectData.items.filter((project) => project.homepage);
 ---
 
 <BaseLayout>
-  <section class="home-about container">
+  <section class="home-about container" id="about">
     <h1>About Me</h1>
     <p>{profile.about}</p>
     <p class="research-interests"><strong>Interests:</strong> {profile.interests}</p>
   </section>
 
-  <section class="container content-section">
+  <section class="container content-section" id="experience">
     <h2>Research Experience</h2>
     <div class="institution-list">
       {experience.research.map((item) => (
@@ -34,7 +34,7 @@ const currentProjects = projectData.items.filter((project) => project.homepage);
     </div>
   </section>
 
-  <section class="container content-section">
+  <section class="container content-section" id="education">
     <h2>Education</h2>
     <div class="institution-list">
       {experience.education.map((item) => (
@@ -53,7 +53,7 @@ const currentProjects = projectData.items.filter((project) => project.homepage);
     </div>
   </section>
 
-  <section class="container content-section">
+  <section class="container content-section" id="current-projects">
     <div class="section-title">
       <h2>Current Projects</h2>
       <a href="/projects">View all</a>

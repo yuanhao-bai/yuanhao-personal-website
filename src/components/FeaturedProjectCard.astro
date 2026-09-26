@@ -10,6 +10,8 @@ interface Props {
     software: string[];
     badge?: string;
     cover?: string;
+    coverAlt?: string;
+    coverCaption?: string;
     coverKind?: string;
   };
 }
@@ -21,7 +23,7 @@ const stack = [...project.hardware, ...project.software].slice(0, 4);
 <article class="featured-project-card">
   <a class={`project-cover project-cover--${project.coverKind ?? 'plain'}`} href={`/projects/${project.slug}`} aria-label={`Read about ${project.title}`}>
     {project.cover ? (
-      <img src={project.cover} alt={`${project.title} research overview`} loading="lazy" />
+      <img src={project.cover} alt={project.coverAlt || `${project.title} research overview`} loading="lazy" />
     ) : project.coverKind === 'npu' ? (
       <div class="npu-cover" aria-hidden="true">
         <div class="npu-organizations">
@@ -47,6 +49,7 @@ const stack = [...project.hardware, ...project.software].slice(0, 4);
       <div class="plain-cover" aria-hidden="true">{project.title}</div>
     )}
     {project.badge && <span class="project-badge">{project.badge}</span>}
+    {project.coverCaption && <span class="project-cover-caption">{project.coverCaption}</span>}
   </a>
 
   <div class="featured-project-body">

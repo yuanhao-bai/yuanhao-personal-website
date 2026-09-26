@@ -32,6 +32,21 @@ const { project } = Astro.props;
       <h2>Status</h2>
       <p>{project.results}</p>
     </div>
+    {project.figures.length > 0 && (
+      <section class="project-figures" aria-label="Selected project figures">
+        <h2>Selected figures</h2>
+        <div class="project-figure-grid">
+          {project.figures.map((figure) => (
+            <figure>
+              <div class={`project-figure-image project-figure-image--${figure.kind}`}>
+                <img src={figure.src} alt={figure.caption} loading="lazy" />
+              </div>
+              <figcaption>{figure.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+    )}
     <p><a href="/projects">← All projects</a></p>
   </section>
 </BaseLayout>
