@@ -1,0 +1,61 @@
+---
+interface Props {
+  project: {
+    slug: string;
+    title: string;
+    subtitle: string;
+    period: string;
+    summary: string;
+    hardware: string[];
+    software: string[];
+    badge?: string;
+    cover?: string;
+    coverKind?: string;
+  };
+}
+
+const { project } = Astro.props;
+const stack = [...project.hardware, ...project.software].slice(0, 4);
+---
+
+<article class="featured-project-card">
+  <a class={`project-cover project-cover--${project.coverKind ?? 'plain'}`} href={`/projects/${project.slug}`} aria-label={`Read about ${project.title}`}>
+    {project.cover ? (
+      <img src={project.cover} alt={`${project.title} research overview`} loading="lazy" />
+    ) : project.coverKind === 'npu' ? (
+      <div class="npu-cover" aria-hidden="true">
+        <div class="npu-organizations">
+          <img src="/huawei-logo.svg" alt="" />
+          <span>×</span>
+          <img src="/um-logo.svg" alt="" />
+        </div>
+        <div class="runtime-path">
+          <span>ONNX</span><i></i><span>NPU</span><i></i><span>Runtime</span>
+        </div>
+      </div>
+    ) : project.coverKind === 'swarm' ? (
+      <div class="swarm-cover" aria-hidden="true">
+        <div class="swarm-object"></div>
+        <span class="swarm-node node-1"></span>
+        <span class="swarm-node node-2"></span>
+        <span class="swarm-node node-3"></span>
+        <span class="swarm-node node-4"></span>
+        <span class="swarm-node node-5"></span>
+        <p>collective virtual end-effector</p>
+      </div>
+    ) : (
+      <div class="plain-cover" aria-hidden="true">{project.title}</div>
+    )}
+    {project.badge && <span class="project-badge">{project.badge}</span>}
+  </a>
+
+  <div class="featured-project-body">
+    <time>{project.period}</time>
+    <h3><a href={`/projects/${project.slug}`}>{project.title}</a></h3>
+    <p>{project.summary}</p>
+    <p class="project-stack">{stack.join(' · ')}</p>
+    <div class="project-actions">
+      <a href={`/projects/${project.slug}`}>Project page</a>
+    </div>
+  </div>
+</article>

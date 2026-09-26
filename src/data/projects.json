@@ -1,4 +1,5 @@
-[
+{
+  "items": [
   {
     "slug": "autorole-tiny",
     "title": "AutoRole-Tiny",
@@ -7,6 +8,10 @@
     "period": "Jul 2026 — Present",
     "repository": "",
     "featured": true,
+    "homepage": true,
+    "badge": "Distributed TinyML",
+    "cover": "/uploads/projects/autorole-tiny.png",
+    "coverKind": "image",
     "theme": "distributed",
     "summary": "A decentralized TinyML system that enables homogeneous nRF52840 nodes to adapt sensing, relay, reporting, and sleep roles from local observations.",
     "motivation": "Homogeneous MCU swarms must adapt their responsibilities under changing sensing, communication, and energy conditions without centralized coordination.",
@@ -18,6 +23,28 @@
     "artifacts": ["SenSys 2027 manuscript in preparation"]
   },
   {
+    "slug": "efficient-npu-runtime",
+    "title": "Efficient NPU Inference Runtime",
+    "subtitle": "AI infrastructure for resource-constrained smart-glasses workloads",
+    "status": "Active research · Huawei–University of Macau Joint Research Project",
+    "period": "Sep 2026 — Present",
+    "repository": "",
+    "featured": true,
+    "homepage": true,
+    "badge": "AI Infrastructure",
+    "cover": "",
+    "coverKind": "npu",
+    "theme": "distributed",
+    "summary": "Runtime and deployment research spanning ONNX graph execution, NPU backend integration, tensor memory planning, scheduling, and end-to-end profiling.",
+    "motivation": "Wearable AI systems require useful models to run within tight memory, latency, and energy constraints.",
+    "problem": "How can model graphs be mapped, scheduled, and profiled efficiently across constrained NPU-backed smart-glasses platforms?",
+    "method": "Analyze ONNX execution, backend integration, tensor lifetimes, runtime scheduling, and system-level bottlenecks while supporting deployment and optimization work with University of Macau master's students.",
+    "hardware": ["NPU-enabled smart glasses"],
+    "software": ["ONNX", "NPU backend integration", "Tensor memory planning", "Runtime scheduling"],
+    "results": "Ongoing joint research on model deployment and systems optimization.",
+    "artifacts": ["Huawei–University of Macau joint research project"]
+  },
+  {
     "slug": "fireguard",
     "title": "FireGuard",
     "subtitle": "Multimodal fire-risk early warning and intervention",
@@ -25,6 +52,10 @@
     "period": "Mar 2025 — Jun 2026",
     "repository": "",
     "featured": true,
+    "homepage": false,
+    "badge": "Safety Systems",
+    "cover": "",
+    "coverKind": "plain",
     "theme": "safety",
     "summary": "A Jetson Nano and ESP32 system for multimodal fire-risk detection and intervention in underground electric-vehicle charging environments.",
     "motivation": "Early fire-risk signals are heterogeneous and difficult to identify reliably with a single sensing modality.",
@@ -43,6 +74,10 @@
     "period": "Jan 2026 — Present",
     "repository": "",
     "featured": true,
+    "homepage": false,
+    "badge": "Multimodal Sensing",
+    "cover": "",
+    "coverKind": "plain",
     "theme": "perception",
     "summary": "A driver-state monitoring framework combining visual, audio and speech, and smoking-related gas or smoke cues.",
     "motivation": "Fatigue and distraction manifest differently across drivers and operating conditions, making single-modality systems brittle.",
@@ -60,7 +95,11 @@
     "status": "Submitted to IEEE ICRA 2027",
     "period": "Jul 2026 — Present",
     "repository": "",
-    "featured": false,
+    "featured": true,
+    "homepage": true,
+    "badge": "Robot Swarms",
+    "cover": "",
+    "coverKind": "swarm",
     "theme": "distributed",
     "summary": "A swarm manipulation system using collective virtual end-effectors for feedback-driven foundation-model control.",
     "motivation": "Robot swarms can act as reconfigurable physical tools for manipulation beyond the capability of individual agents.",
@@ -79,6 +118,10 @@
     "period": "Jul 2026",
     "repository": "",
     "featured": false,
+    "homepage": false,
+    "badge": "Edge Vision",
+    "cover": "",
+    "coverKind": "plain",
     "theme": "perception",
     "summary": "A 13-class YOLOv8s-OBB inspection system deployed with INT8 RKNN inference on QSM368ZP-WF/RK3568.",
     "motivation": "Industrial fastener inspection requires accurate orientation-aware detection under edge-computing constraints.",
@@ -97,6 +140,10 @@
     "period": "Mar 2026 — May 2026",
     "repository": "",
     "featured": false,
+    "homepage": false,
+    "badge": "Simulation",
+    "cover": "",
+    "coverKind": "plain",
     "theme": "safety",
     "summary": "A Unity/Tuanjie emergency simulation integrating thermal-runaway progression, intervention, and pedestrian evacuation.",
     "motivation": "Emergency evacuation decisions depend on local hazards and changing conditions that fixed scripts represent poorly.",
@@ -107,4 +154,5 @@
     "results": "Received First Prize in the 10th Central South University Virtual Simulation Design Competition.",
     "artifacts": ["Interactive simulation"]
   }
-]
+  ]
+}

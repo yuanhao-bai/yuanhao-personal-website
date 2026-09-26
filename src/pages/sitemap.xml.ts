@@ -1,13 +1,14 @@
-import projects from '../data/projects.json';
+import projectData from '../data/projects.json';
 import { getCollection } from 'astro:content';
 
 export async function GET() {
   const notes = await getCollection('notes', ({ data }) => !data.draft);
+  const site = 'https://yuanhao-bai.github.io/yuanhao-personal-website';
   const staticRoutes = ['', 'research', 'projects', 'publications', 'timeline', 'notes', 'cv'];
   const urls = [
-    ...staticRoutes.map((route) => `https://yuanhaobai.com/${route}`),
-    ...projects.map((project) => `https://yuanhaobai.com/projects/${project.slug}`),
-    ...notes.map((note) => `https://yuanhaobai.com/notes/${note.id}`)
+    ...staticRoutes.map((route) => `${site}/${route}`),
+    ...projectData.items.map((project) => `${site}/projects/${project.slug}`),
+    ...notes.map((note) => `${site}/notes/${note.id}`)
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

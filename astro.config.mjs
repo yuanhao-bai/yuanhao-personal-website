@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://yuanhaobai.com',
+  site: 'https://yuanhao-bai.github.io/yuanhao-personal-website',
   output: 'static',
   trailingSlash: 'never',
   build: {

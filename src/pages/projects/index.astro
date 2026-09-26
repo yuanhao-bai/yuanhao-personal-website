@@ -2,12 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageIntro from '../../components/PageIntro.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
-import projects from '../../data/projects.json';
+import projectData from '../../data/projects.json';
 ---
 
 <BaseLayout title="Projects" description="Selected research projects by Yuanhao Bai.">
   <PageIntro title="Projects" description="Selected systems research and engineering work." />
   <section class="container content-section project-list">
-    {projects.map((project) => <ProjectCard project={project} />)}
+    {projectData.items.map((project) => <ProjectCard project={project} />)}
   </section>
 </BaseLayout>

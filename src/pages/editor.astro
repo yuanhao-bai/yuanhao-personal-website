@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+---
+
+<BaseLayout title="Content Editor" description="Edit the homepage and projects through a GitHub-connected content editor.">
+  <PageIntro title="Content Editor" description="Update the website without editing Astro files." />
+  <section class="container content-section editor-panel">
+    <ol>
+      <li>Sign in to Pages CMS with your GitHub account.</li>
+      <li>Open <strong>yuanhao-bai/yuanhao-personal-website</strong>.</li>
+      <li>Edit the homepage text or projects, then save. GitHub Pages will redeploy automatically.</li>
+    </ol>
+    <p>
+      Project order follows the editor list. Turn on <strong>Show on homepage</strong> for the three cards you want on the front page, and upload a cover image when needed.
+    </p>
+    <a class="editor-button" href="https://app.pagescms.org/" target="_blank" rel="noreferrer">Open content editor</a>
+    <p class="editor-note">Only GitHub users with repository access can save changes.</p>
+  </section>
+</BaseLayout>

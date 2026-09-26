@@ -20,6 +20,10 @@ npm run preview
 
 ## Updating content
 
+For form-based editing, sign in at [Pages CMS](https://app.pagescms.org/) with GitHub,
+open this repository, and edit **Homepage & profile** or **Projects**. Saving creates a
+GitHub commit and the existing Pages workflow publishes the update automatically.
+
 Most recurring updates only require editing files in `src/data/`:
 
 - `profile.json` — affiliation, contact details, and academic links
@@ -34,9 +38,9 @@ frontmatter fields as the existing examples; Astro generates its page automatica
 
 ## Deployment
 
-The site is fully static and uses `https://yuanhaobai.com` as its canonical origin.
+The site is fully static and uses
+`https://yuanhao-bai.github.io/yuanhao-personal-website/` as its canonical origin.
 Pushes to `main` deploy automatically through GitHub Pages. The Pages build uses a
-repository-aware path prefix; the regular `npm run build` command remains suitable for
-the final custom domain and Sites-compatible hosting.
+repository-aware path prefix; no separately registered domain is required.
 
 Before public launch, add verified contact and academic-profile URLs in `profile.json`.

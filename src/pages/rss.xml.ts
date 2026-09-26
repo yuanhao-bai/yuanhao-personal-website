@@ -1,5 +1,7 @@
 import { getCollection } from 'astro:content';
 
+const site = 'https://yuanhao-bai.github.io/yuanhao-personal-website';
+
 const escape = (value: string) =>
   value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 
@@ -10,8 +12,8 @@ export async function GET() {
   const items = notes.map((note) => `
     <item>
       <title>${escape(note.data.title)}</title>
-      <link>https://yuanhaobai.com/notes/${note.id}</link>
-      <guid>https://yuanhaobai.com/notes/${note.id}</guid>
+      <link>${site}/notes/${note.id}</link>
+      <guid>${site}/notes/${note.id}</guid>
       <pubDate>${note.data.published.toUTCString()}</pubDate>
       <description>${escape(note.data.description)}</description>
     </item>`).join('');
@@ -20,7 +22,7 @@ export async function GET() {
 <rss version="2.0">
   <channel>
     <title>Yuanhao Bai — Research Notes</title>
-    <link>https://yuanhaobai.com/notes</link>
+    <link>${site}/notes</link>
     <description>Research notes on embedded AI, TinyML, and networked physical systems.</description>
     ${items}
   </channel>

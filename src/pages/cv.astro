@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageIntro from '../components/PageIntro.astro';
 import profile from '../data/profile.json';
-import projects from '../data/projects.json';
+import projectData from '../data/projects.json';
 import awards from '../data/awards.json';
 import publications from '../data/publications.json';
 
@@ -31,7 +31,7 @@ const patents = publications.filter((item) => item.type === 'Patent');
     </section>
     <section>
       <h2>Projects</h2>
-      {projects.map((project) => (
+      {projectData.items.map((project) => (
         <div class="cv-row"><time>{project.period}</time><p><strong>{project.title}</strong><br />{project.subtitle}</p></div>
       ))}
     </section>

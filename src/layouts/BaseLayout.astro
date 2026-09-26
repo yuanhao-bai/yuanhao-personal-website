@@ -20,8 +20,11 @@ const {
 } = Astro.props;
 
 const pageTitle = title === profile.name ? `${profile.name} — Research Portfolio` : `${title} — ${profile.name}`;
-const canonical = new URL(Astro.url.pathname, profile.website);
-const socialImage = image ? new URL(image, profile.website).toString() : undefined;
+const siteRoot = profile.website.replace(/\/$/, '');
+const canonical = `${siteRoot}${Astro.url.pathname === '/' ? '/' : Astro.url.pathname}`;
+const socialImage = image
+  ? image.startsWith('http') ? image : `${siteRoot}/${image.replace(/^\//, '')}`
+  : undefined;
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',

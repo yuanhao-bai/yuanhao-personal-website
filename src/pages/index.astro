@@ -1,21 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import projects from '../data/projects.json';
+import FeaturedProjectCard from '../components/FeaturedProjectCard.astro';
+import projectData from '../data/projects.json';
 import experience from '../data/experience.json';
+import profile from '../data/profile.json';
 
-const selectedProjects = projects.slice(0, 3);
+const currentProjects = projectData.items.filter((project) => project.homepage);
 ---
 
 <BaseLayout>
   <section class="home-about container">
     <h1>About Me</h1>
-    <p>
-      I am a Research Assistant at HKUST(GZ), working on distributed and
-      resource-aware AI systems. My research explores how constrained devices
-      and robot collectives can learn, coordinate, and act in the physical world.
-    </p>
-    <p class="research-interests"><strong>Interests:</strong> Multi-agent reinforcement learning, distributed AI, TinyML, and multimodal sensing.</p>
+    <p>{profile.about}</p>
+    <p class="research-interests"><strong>Interests:</strong> {profile.interests}</p>
   </section>
 
   <section class="container content-section">
@@ -58,11 +55,11 @@ const selectedProjects = projects.slice(0, 3);
 
   <section class="container content-section">
     <div class="section-title">
-      <h2>Selected Projects</h2>
+      <h2>Current Projects</h2>
       <a href="/projects">View all</a>
     </div>
-    <div class="project-list">
-      {selectedProjects.map((project) => <ProjectCard project={project} />)}
+    <div class="featured-project-grid">
+      {currentProjects.map((project) => <FeaturedProjectCard project={project} />)}
     </div>
   </section>
 

@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageIntro from '../../components/PageIntro.astro';
-import projects from '../../data/projects.json';
+import projectData from '../../data/projects.json';
 
 export function getStaticPaths() {
-  return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
+  return projectData.items.map((project) => ({ params: { slug: project.slug }, props: { project } }));
 }
 const { project } = Astro.props;
 ---

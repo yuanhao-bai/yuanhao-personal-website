@@ -3,7 +3,7 @@ export function GET() {
     `User-agent: *
 Allow: /
 
-Sitemap: https://yuanhaobai.com/sitemap.xml
+Sitemap: https://yuanhao-bai.github.io/yuanhao-personal-website/sitemap.xml
 `,
     { headers: { 'Content-Type': 'text/plain; charset=utf-8' } }
   );

@@ -1,0 +1,84 @@
+media:
+  input: public/uploads
+  output: /uploads
+
+content:
+  - name: profile
+    label: Homepage & profile
+    type: file
+    path: src/data/profile.json
+    fields:
+      - { name: name, label: Name, type: string }
+      - { name: role, label: Current role, type: string }
+      - { name: institution, label: Institution, type: string }
+      - { name: institutionShort, label: Short institution name, type: string }
+      - { name: location, label: Location, type: string }
+      - { name: education, label: Education summary, type: text }
+      - { name: tagline, label: Tagline, type: string }
+      - { name: about, label: Homepage introduction, type: text }
+      - { name: interests, label: Research interests, type: text }
+      - { name: vision, label: Research vision, type: text }
+      - { name: availability, label: Opportunity statement, type: text }
+      - { name: website, label: Website URL, type: string }
+      - { name: email, label: Email, type: string }
+      - { name: github, label: GitHub URL, type: string }
+      - { name: scholar, label: Google Scholar URL, type: string, required: false }
+      - { name: orcid, label: ORCID URL, type: string, required: false }
+      - { name: linkedin, label: LinkedIn URL, type: string, required: false }
+
+  - name: projects
+    label: Projects
+    type: file
+    path: src/data/projects.json
+    fields:
+      - name: items
+        label: Project cards and pages
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title} · {period}"
+        fields:
+          - { name: slug, label: URL slug, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: subtitle, label: Subtitle, type: text }
+          - { name: status, label: Status, type: string }
+          - { name: period, label: Period, type: string }
+          - { name: repository, label: Repository URL, type: string, required: false }
+          - { name: featured, label: Featured project, type: boolean, default: false }
+          - name: homepage
+            label: Show on homepage
+            type: boolean
+            default: false
+            description: Keep three projects enabled for the cleanest homepage layout.
+          - { name: badge, label: Card badge, type: string, required: false }
+          - name: cover
+            label: Cover image
+            type: image
+            required: false
+            options:
+              path: projects
+              extensions: [jpg, jpeg, png, webp]
+              rename: true
+          - name: coverKind
+            label: Cover style
+            type: select
+            options:
+              values:
+                - { name: image, label: Uploaded image }
+                - { name: npu, label: NPU diagram }
+                - { name: swarm, label: Swarm diagram }
+                - { name: plain, label: Plain title cover }
+          - name: theme
+            label: Research theme
+            type: select
+            options:
+              values: [distributed, safety, perception]
+          - { name: summary, label: Card summary, type: text }
+          - { name: motivation, label: Motivation, type: text }
+          - { name: problem, label: Research problem, type: text }
+          - { name: method, label: Approach, type: text }
+          - { name: hardware, label: Hardware, type: string, list: true, required: false }
+          - { name: software, label: Software and methods, type: string, list: true, required: false }
+          - { name: results, label: Results or current status, type: text }
+          - { name: artifacts, label: Publications and artifacts, type: string, list: true, required: false }
