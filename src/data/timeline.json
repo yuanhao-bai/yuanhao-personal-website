@@ -9,12 +9,21 @@
     "featured": true
   },
   {
+    "date": "2026-09",
+    "displayDate": "September 2026",
+    "year": 2026,
+    "type": "Position",
+    "title": "Concluded research assistant work at HKUST(GZ)",
+    "description": "July–September 2026 · Distributed TinyML and embedded cyber-physical systems.",
+    "featured": true
+  },
+  {
     "date": "2026-07",
     "displayDate": "July 2026",
     "year": 2026,
     "type": "Position",
     "title": "Joined ATOMIC Lab at HKUST(GZ) as a Research Assistant",
-    "description": "Working on AutoRole-Tiny and distributed embedded intelligence.",
+    "description": "Worked on AutoRole-Tiny and distributed embedded intelligence.",
     "featured": true
   },
   {

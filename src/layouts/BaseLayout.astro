@@ -32,12 +32,8 @@ const personSchema = {
   url: profile.website,
   jobTitle: profile.role,
   affiliation: {
-    '@type': 'CollegeOrUniversity',
+    '@type': 'Organization',
     name: profile.institution
-  },
-  alumniOf: {
-    '@type': 'CollegeOrUniversity',
-    name: 'Central South University'
   },
   knowsAbout: [
     'Multi-Agent Reinforcement Learning',
