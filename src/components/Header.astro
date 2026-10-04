@@ -1,4 +1,6 @@
 ---
+import profile from '../data/profile.json';
+
 const pathname = Astro.url.pathname;
 const links = [
   { href: '/', label: 'Home' },
@@ -6,7 +8,7 @@ const links = [
   { href: '/projects', label: 'Projects' },
   { href: '/publications', label: 'Publications' },
   { href: '/timeline', label: 'Timeline' },
-  { href: '/cv', label: 'CV' }
+  { href: profile.cvPdf, label: 'CV' }
 ];
 const active = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href);
 ---

@@ -13,7 +13,7 @@ const patents = publications.filter((item) => item.type === 'Patent');
 <BaseLayout title="Curriculum Vitae" description="Curriculum vitae of Yuanhao Bai.">
   <PageIntro title="Curriculum Vitae" description={`${profile.role}, ${profile.institutionShort}`} />
   <section class="container content-section cv">
-    <button class="print-button" onclick="window.print()">Print / Save PDF</button>
+    <a class="print-button" href={profile.cvPdf}>Open latest CV (PDF)</a>
     <section>
       <h2>Research interests</h2>
       <p>Multi-agent reinforcement learning, distributed and resource-aware AI systems, TinyML, and multimodal sensing.</p>

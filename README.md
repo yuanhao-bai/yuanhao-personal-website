@@ -20,6 +20,14 @@ npm run preview
 
 ## Updating content
 
+The public CV PDF is `public/Yuanhao_Bai_CV.pdf`. Replace that file when the CV
+changes to keep the application-ready URL stable:
+
+`https://yuanhao-bai.github.io/yuanhao-personal-website/Yuanhao_Bai_CV.pdf`
+
+The website's CV links open this PDF directly. The older `/cv` HTML page remains
+available and links to the current PDF.
+
 For form-based editing, sign in at [Pages CMS](https://app.pagescms.org/) with GitHub,
 open this repository, and edit **Homepage & profile** or **Projects**. Saving creates a
 GitHub commit and the existing Pages workflow publishes the update automatically.
