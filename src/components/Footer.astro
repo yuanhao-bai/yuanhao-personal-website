@@ -8,6 +8,7 @@ import profile from '../data/profile.json';
     <span>
       {profile.email && <a href={`mailto:${profile.email}`}>Email</a>}
       {profile.github && <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>}
+      {profile.linkedin && <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>}
       <a href="/rss.xml">RSS</a>
     </span>
   </div>
